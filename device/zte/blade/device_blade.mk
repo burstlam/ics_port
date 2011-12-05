@@ -21,7 +21,7 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 
@@ -35,20 +35,19 @@ PRODUCT_MODEL := ZTE Blade
 PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
-    VisualizationWallpapers \
     MagicSmokeWallpapers \
     VisualizationWallpapers \
     librs_jni \
     Gallery3d \
     SpareParts \
     Development \
-    Term \
-    FM \
     gralloc.blade \
+    hwcomposer.default \
     copybit.blade \
     gps.blade \
     libOmxCore \
     libOmxVidEnc \
+    Stk \
     dexpreopt
 
 # proprietary side of the device
